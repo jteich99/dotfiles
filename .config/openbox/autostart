@@ -12,13 +12,15 @@
 #  gnome-settings-daemon &
 #fi
 
+# test
+xcompmgr -n &
 
 # nitrogen 
-nitrogen --restore &
+(sleep 1s && nitrogen --restore) &
 
 
 # Compositor
-picom -f &
+# picom -f &
 
 
 #Tint2	

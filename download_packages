@@ -1,0 +1,60 @@
+sudo apt install
+	obconf
+	nitrogen
+	scrot
+	xclip
+	lxappearance
+	nautilus
+	python-nautilus
+	rofi
+	kitty
+	zsh
+	dunst
+	tint2
+	redshift
+	tmux
+	xbacklight
+	dmenu
+	imagemagick
+	gnome-screensaver
+	xautolock
+	xfce4-power-manager
+	clipit
+	perl
+	sed
+	playerctl
+	gedit
+	gedit-plugins
+	pulseaudio
+	neofetch
+	zathura
+	bat
+	vim
+	neovim
+	alsa-utils
+	wireless-tools
+	xinput
+	arandr
+	autorandr
+	
+sudo snap install
+	spotify
+
+pip install
+	ydif
+
+replaced by x11-xserver-utils
+	xset
+	xrandr
+	
+other method
+	oh-my-zsh 
+		https://ohmyz.sh/
+		sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+	tpm
+	networkmanager-dmenu
+	rofi-bluetooth
+	picom	
+	
+??
+	awk
