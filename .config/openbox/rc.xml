@@ -808,6 +808,18 @@
       <maximized>false</maximized>
       <decor>no</decor>
     </application>
+    <application title="obsidian">
+      <maximized>true</maximized>
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+      <size>
+        <width>90%</width>
+        <height>90%</height>
+      </size>
+      <decor>no</decor>
+    </application>
     <application title="google-chrome">
       <maximized>true</maximized>
       <position force="yes">
@@ -823,7 +835,7 @@
     <application name="kitty">
       <position force="yes">
         <x>center</x>
-        <y>15</y>
+        <y>center</y>
       </position>
       <size>
         <width>70%</width>
@@ -845,12 +857,17 @@
       </position>
     </application>
     <application name="nautilus">
-      <maximized>Vertical</maximized>
-      <decor>no</decor>
+      <!-- <maximized>Vertical</maximized> -->
+      <!-- <decor>no</decor> -->
       <position force="yes">
-        <x>0</x>
-        <y>0</y>
+        <x>center</x>
+        <y>center</y>
       </position>
+      <size>
+        <width>70%</width>
+        <height>75%</height>
+      </size>
+      <decor>no</decor>
     </application>
   </applications>
 </openbox_config>
