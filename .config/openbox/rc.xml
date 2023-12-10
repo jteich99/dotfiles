@@ -110,7 +110,7 @@
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
-    <!-- <cornerRadius>5</cornerRadius> -->
+    <cornerRadius>5</cornerRadius>
   </theme>
   <desktops>
     <!-- this stuff is only used at startup, pagers allow you to change them
@@ -160,8 +160,8 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>0</top>
-    <bottom>0</bottom>
+    <top>3</top>
+    <bottom>3</bottom>
     <left>0</left>
     <right>0</right>
   </margins>
@@ -290,6 +290,11 @@
     # Arrows
     <keybind key="W-Left"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>50%</width><x>+-0</x></action></keybind>
     <keybind key="W-Right"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>50%</width><x>-0</x></action></keybind>   
+    <keybind key="W-A-Left"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>33%</width><x>0</x></action></keybind>   
+    <keybind key="W-A-Up"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>34%</width><x>-33%</x></action></keybind>
+    <keybind key="W-A-Right"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>33%</width><x>-0</x></action></keybind>    
+    <keybind key="W-C-Left"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>67%</width><x>0</x></action></keybind> 
+    <keybind key="W-C-Right"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>67%</width><x>-0</x></action></keybind>   
     <keybind key="W-Up"><action name="Unmaximize"/><action name="MoveResizeTo"><height>50%</height><y>0</y></action></keybind> 
     <keybind key="W-Down"><action name="Unmaximize"/><action name="MoveResizeTo"><height>50%</height><y>-0</y></action></keybind> 
 
@@ -330,6 +335,12 @@
 <keybind key="C-Print"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot '/tmp/screenshot.png' -e 'xclip -selection clipboard -t image/png -i $f  ; notify-send Screenshot -i /tmp/screenshot.png -u normal "Snapshot Copied" '</command></action></keybind>
 <keybind key="C-A-Print"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot -s -f '/tmp/screenshot.png' -e 'xclip -selection clipboard -t image/png -i $f  ; notify-send Screenshot -i /tmp/screenshot.png -u normal "Snapshot Copied" '</command></action></keybind>
 <keybind key="C-S-Print"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot -s -f '/tmp/screenshot.png' -e 'xclip -selection clipboard -t image/png -i $f  ; notify-send Screenshot -i /tmp/screenshot.png -u normal "Snapshot Copied" '</command></action></keybind>
+
+#   Screenshot for Mx Keys (S-W-s = Fn-F8)
+<keybind key="W-F8"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot 'snap_%y_%m_%d_%H_%M_%S.png' -e 'mv $f ~/Pictures/  ; notify-send Screenshot -i ~/Pictures/$f -u normal "Snapshot Taken" '</command></action></keybind>
+<keybind key="S-F8"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot -s -f 'snap_%y_%m_%d_%H_%M_%S.png' -e 'mv $f ~/Pictures/  ; notify-send Screenshot -i ~/Pictures/$f -u normal "Snapshot Taken" '</command></action></keybind>
+<keybind key="C-W-F8"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot '/tmp/screenshot.png' -e 'xclip -selection clipboard -t image/png -i $f  ; notify-send Screenshot -i /tmp/screenshot.png -u normal "Snapshot Copied" '</command></action></keybind>
+<keybind key="C-S-F8"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot -s -f '/tmp/screenshot.png' -e 'xclip -selection clipboard -t image/png -i $f  ; notify-send Screenshot -i /tmp/screenshot.png -u normal "Snapshot Copied" '</command></action></keybind>
 
 
 #	Power

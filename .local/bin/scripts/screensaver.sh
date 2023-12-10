@@ -17,17 +17,23 @@ fi
 if [ "$1" != "-f" -a `ps -u $USER | grep -Ec "(totem|mpv|vlc|*mplayer)"` -gt 0 ]; then
     exit
 fi
- 
+
+rm -rf "/home/$USER/screensaver/lockscreen1.png" 
+rm -rf "/home/$USER/screensaver/lockscreen2.png"
+
 screen1="/home/$USER/screensaver/lockscreen1.png"
 screen2="/home/$USER/screensaver/lockscreen2.png"
 # take screenshot
 scrot $screen1
 # pixelate and blur image using convert (could use mogrify but is slower)
+# convert $screen1 -blur $screen2
 convert $screen1 -scale 40% -scale 250% -blur 10x10 $screen2
-# delete first screen1
-rm $screen1
+# 2 delete first screen1
+# rm $screen1
 # make screenshot gnome background
+# gsettings set org.gnome.desktop.background picture-uri "file://$screen2" picture-options "spanned" 2> /dev/null
 gsettings set org.gnome.desktop.background picture-uri "file://$screen2" 2> /dev/null
+# gsettings set org.gnome.desktop.background picture-uri "file://$screen1" picture-options "spanned"
 # lock screen using gnome-screensaver
 exec gnome-screensaver-command -l &
 

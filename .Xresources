@@ -34,3 +34,10 @@
 ! white
  *.color7:       #c2c7c6
  *.color15:      #c2c7c6
+
+! Render setting for cairo -> pango -> gtk
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.hinting:    true
+Xft.rgba:       rgb
+Xft.hintstyle:  hintslight
