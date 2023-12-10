@@ -9,23 +9,24 @@
 
 configuration {
   font: "Cascadia Code 10";
-
-  drun {
+/*
+  drun: {
     display-name: "";
   }
 
-  run {
+  run: {
     display-name: "";
   }
 
-  window {
+  window: {
     display-name: "";
   }
 
-  timeout {
+  timeout: {
     delay: 10;
     action: "kb-cancel";
   }
+*/
 }
 
 * {
