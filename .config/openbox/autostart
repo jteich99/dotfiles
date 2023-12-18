@@ -24,7 +24,7 @@ xcompmgr -n &
 
 
 #Tint2	
-tint2 &
+# tint2 &
 #tint2 -c ~/.config/tint2/pills-time.tint2rc & 
 #tint2 -c ~/.config/tint2/pills-taskbar.tint2rc &
 #tint2 -c ~/.config/tint2/pills-mpd.tint2rc &
@@ -33,7 +33,7 @@ tint2 &
 
 #Polybar
 #$HOME/.config/polybar/launch.sh
-
+bash $HOME/Documents/dotfiles/.config/polybar/launch.sh & 
 
 # Notification daemon
 dunst &
