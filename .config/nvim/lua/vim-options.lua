@@ -13,10 +13,6 @@ vim.cmd("set number")
 vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 
--- Better indenting
-vim.keymap.set('v', '<', '<gv')
-vim.keymap.set('v', '>', '>gv')
-
 -- Resize with arrows
 vim.keymap.set( 'n', "<C-Up>" , ":resize -2<CR>")
 vim.keymap.set( 'n', "<C-Down>" , ":resize +2<CR>")
@@ -32,6 +28,15 @@ vim.keymap.set( 'n', "<C-h>" , "<C-w>h")
 vim.keymap.set( 'n', "<C-j>" , "<C-w>j")
 vim.keymap.set( 'n', "<C-k>" , "<C-w>k")
 vim.keymap.set( 'n', "<C-l>" , "<C-w>l")
+
+-- Visual Mode
+-- Move current line / block with Alt-j/k ala vscode.
+vim.keymap.set('v', "<A-j>" , ":m '>+1<CR>gv-gv")
+vim.keymap.set('v', "<A-k>" , ":m '<-2<CR>gv-gv")
+
+-- Better indenting
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
 
 -- Insert Mode
 -- Move current line / block with Alt-j/k ala vscode.
