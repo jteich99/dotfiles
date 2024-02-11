@@ -46,7 +46,7 @@ xfce4-power-manager &
 #redshift
 # redshift -c ~/.config/redshift/redshift.conf &
 # NOTE: Redshift not working properly with symlinks.
-redshift -l -36:-64 -t 5000:2500 &
+redshift -l -36:-64 -t 5000:3500 &
 
 
 #clipit
