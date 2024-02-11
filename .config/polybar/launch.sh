@@ -1,3 +1,9 @@
+#!/usr/bin/env zsh
+
 killall -q polybar
 
-polybar mybar -c ~/Documents/dotfiles/.config/polybar/config.ini 
+for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar mybar -c ~/.config/polybar/config.ini &
+done
+
+# polybar mybar -c ~/.config/polybar/config.ini 
