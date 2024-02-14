@@ -6,8 +6,13 @@ return {
     config = function()
         require('Comment').setup{
             toggler = {
-                -- line = '<leader>c'
-            }
+                line = '<leader>/',
+                block = '<leader>/',
+            },
+            opleader = {
+                line = '<leader>/',
+                block = '<leader>/',
+            },
         }
     end
 }
