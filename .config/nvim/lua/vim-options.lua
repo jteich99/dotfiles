@@ -13,6 +13,9 @@ vim.cmd("set number")
 vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 
+-- Close current buffer
+vim.keymap.set('n', '<leader>c', ':Bclose<CR>')
+
 -- Resize with arrows
 vim.keymap.set( 'n', "<C-Up>" , ":resize -2<CR>")
 vim.keymap.set( 'n', "<C-Down>" , ":resize +2<CR>")
