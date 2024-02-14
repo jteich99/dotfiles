@@ -110,7 +110,8 @@
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
-    <cornerRadius>5</cornerRadius>
+    <cornerRadius>8</cornerRadius>
+    <cornerRadius menu="yes">8</cornerRadius>
   </theme>
   <desktops>
     <!-- this stuff is only used at startup, pagers allow you to change them
@@ -160,10 +161,10 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>3</top>
-    <bottom>3</bottom>
-    <left>3</left>
-    <right>3</right>
+    <top>0</top>
+    <bottom>0</bottom>
+    <left>0</left>
+    <right>0</right>
   </margins>
   <dock>
     <position>Top</position>
@@ -311,7 +312,7 @@
     <keybind key="W-l"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>50%</width><x>-0</x></action></keybind>   
     <keybind key="W-k"><action name="Unmaximize"/><action name="MoveResizeTo"><height>50%</height><y>0</y></action></keybind> 
     <keybind key="W-j"><action name="Unmaximize"/><action name="MoveResizeTo"><height>50%</height><y>-0</y></action></keybind> 
-        <keybind key="W-F"><action name="Unmaximize"/><action name="MoveResizeTo"><height>70%</height><width>70%</width><x>15%</x><y>15%</y></action></keybind> 
+    <keybind key="W-F"><action name="Unmaximize"/><action name="MoveResizeTo"><height>75%</height><width>70%</width><x>15%</x><y>12%</y></action></keybind> 
 	
 # Keybindings for running applications
 
