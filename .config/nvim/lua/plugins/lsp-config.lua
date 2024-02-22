@@ -18,7 +18,7 @@ return {
                     -- comento los LSP de c++ y de openFOAM porque no funcionan bien cuando estoy desarrollando actuationDisks
                     -- "pyright",
                     -- "jedi_language_server",
-                    -- "pylsp"
+                    "pylsp"
                 }
             })
         end
@@ -34,11 +34,12 @@ return {
             lspconfig.ltex.setup {}
             -- lspconfig.pyright.setup {}
             -- lspconfig.jedi_language_server.setup {}
-            -- lspconfig.pylsp.setup {}
+            lspconfig.pylsp.setup {}
 
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
             vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
+            vim.diagnostic.config({virtual_text = false})
         end
     }
 }
