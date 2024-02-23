@@ -39,7 +39,19 @@ return {
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
             vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
-            vim.diagnostic.config({virtual_text = false})
+
+            vim.diagnostic.disable()
+            local diagnostics_active = false 
+            vim.keymap.set('n', '<leader>d', function()
+                diagnostics_active = not diagnostics_active
+                if diagnostics_active then
+                    vim.diagnostic.show()
+                    vim.diagnostic.enable()
+                else
+                    vim.diagnostic.hide()
+                    vim.diagnostic.disable()
+                end
+            end)
         end
     }
 }
