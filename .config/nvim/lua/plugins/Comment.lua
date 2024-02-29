@@ -4,14 +4,19 @@ return {
     },
     lazy = false,
     config = function()
-        require('Comment').setup{
+        local ft = require('Comment').setup({
             toggler = {
                 line = '<leader>/',
             },
             opleader = {
                 line = '<leader>/',
             },
-        }
+            ignore = '^$'
+        })
+        -- ft.set('foam', '// %s')
+        -- ft.foam = '//%s'
+        local ft = require('Comment.ft') 
+        ft.set('foam','// %s')
     end
 }
 

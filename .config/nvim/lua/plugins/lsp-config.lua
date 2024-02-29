@@ -11,7 +11,7 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "foam_ls",
+                    -- "foam_ls",
                     "clangd",
                     "texlab",
                     -- "ltex",
@@ -28,7 +28,7 @@ return {
         config = function()
             local lspconfig = require('lspconfig')
             lspconfig.lua_ls.setup {}
-            lspconfig.foam_ls.setup {}
+            -- lspconfig.foam_ls.setup {}
             lspconfig.clangd.setup {}
             lspconfig.texlab.setup {}
             -- lspconfig.ltex.setup {}
