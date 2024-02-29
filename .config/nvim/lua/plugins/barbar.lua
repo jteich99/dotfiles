@@ -18,20 +18,5 @@ return {
                 version = '^1.0.0', -- optional: only update when a new 1.x version is released
             },
         }
-
-        -- keymaps
-        local map = vim.api.nvim_set_keymap
-        local opts = { noremap = true, silent = true }
-        -- closing buffer
-        map('n', '<leader>c', '<Cmd>BufferClose<CR>', opts)
-        map('n', '<leader>C', '<Cmd>BufferCloseAllButCurrent<CR>', opts)
-        -- moving in between buffers 
-        map('n', '<A-h>', '<Cmd>BufferPrevious<CR>', opts)
-        map('n', '<A-l>', '<Cmd>BufferNext<CR>', opts)
-        -- moving buffers 
-        map('n', '<A-L>', '<Cmd>BufferMovePrevious<CR>', opts)
-        map('n', '<A-H>', '<Cmd>BufferMoveNext<CR>', opts)
-        -- buffer pick
-        map('n', '<leader>b', '<Cmd>BufferPick<CR>', opts)
     end
 }
