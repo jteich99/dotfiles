@@ -14,6 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 -- required by nvim-notify
 vim.opt.termguicolors = true
 
+vim.opt.clipboard = "unnamedplus"
+
+
 local opts = {}
 
 require("keybindings")
