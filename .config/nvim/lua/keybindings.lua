@@ -62,8 +62,8 @@ map('n', '<leader>C', '<Cmd>BufferCloseAllButCurrent<CR>', opts)
 map('n', '<A-h>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<A-l>', '<Cmd>BufferNext<CR>', opts)
 -- moving buffers 
-map('n', '<A-L>', '<Cmd>BufferMovePrevious<CR>', opts)
-map('n', '<A-H>', '<Cmd>BufferMoveNext<CR>', opts)
+map('n', '<A-H>', '<Cmd>BufferMovePrevious<CR>', opts)
+map('n', '<A-L>', '<Cmd>BufferMoveNext<CR>', opts)
 -- buffer pick
 map('n', '<leader>b', '<Cmd>BufferPick<CR>', opts)
 --
