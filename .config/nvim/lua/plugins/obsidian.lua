@@ -23,8 +23,15 @@ return {
                     name = "juani-sync",
                     path = "~/Documents/juani-sync",
                 },
+                {
+                    name = "juani-vault1",
+                    path = "~/repos/juani-vault1",
+                },
             },
             preferred_link_style = "wiki",
+            -- daily_notes = {
+            --     folder = "01-Personal/daily-notes",
+            -- },
         })
         vim.keymap.set("n", "gf", function()
             if require("obsidian").util.cursor_on_markdown_link() then

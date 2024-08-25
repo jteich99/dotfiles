@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.opt.termguicolors = true
 
 vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = "xclip"
 
 
 local opts = {}
