@@ -1,0 +1,80 @@
+@import "colors/color_picker.rasi"
+
+* {
+  /* General */
+  text-font:                            "Comfortaa 12";
+  icon-font:                            "material 15";
+  show-icons:							 true;
+  icon-theme: "Crayons";
+
+  
+  option-5-listview-spacing:            30px;
+  menu-window-padding:                  40px 9px;
+  menu-element-padding:                 20px 0px 0px 0px;
+}
+
+#window {
+  width: 6%;
+  height: 40%;
+  location: east;
+  anchor: east;
+  x-offset: -1%;
+  y-offset: 0%;
+  border: 0px;
+  padding: @menu-window-padding;
+}
+
+* {
+  background-color: @bg;
+  text-color: @fg;
+  font: @icon-font;
+}
+
+#horibox {
+  children: [ listview ];
+}
+
+#listview {
+  layout: vertical;
+}
+
+* {
+  font: @icon-font;
+}
+
+#window {
+  padding: @menu-window-padding;
+  children: [ inputbar, horibox ];
+}
+
+#inputbar {
+  enabled: false;
+  children: [ textbox-prompt-colon, prompt ];
+  margin: @menu-inputbar-margin;
+}
+
+#listview {
+  spacing: @option-5-listview-spacing;
+  lines: 5;
+}
+
+#element {
+  font: @icon-font;
+  background-color: @bg;
+  border:0;
+  padding: @menu-element-padding;
+  text-color: @se;
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+}
+
+element-text, element-icon {
+    background-color: @bg;
+    text-color:       inherit;
+}
+
+#element.selected {
+    background-color: @bg;
+    border-color: @bg;
+    text-color: @fg;
+}

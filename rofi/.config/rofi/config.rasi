@@ -1,0 +1,8 @@
+/** Basic config file **/
+
+configuration {
+    show-icons:         true;
+    icon-theme:         "Papirus";
+    modes:              [window,drun,run,ssh,windowcd];
+    }
+@theme "~/.config/rofi/tokyonight-JIT.rasi"
