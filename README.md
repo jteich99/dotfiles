@@ -13,3 +13,7 @@ Packages configs are installed via stow. To install a new package you have to ru
 ```shell
 stow -t ~/ <package-name>
 ```
+
+## to-do
+- [ ] implement touchpad touches
+- [x] automate changing to us-international keyboard layout on login

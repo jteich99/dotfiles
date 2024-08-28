@@ -20,6 +20,12 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # execute notification daemon
 exec_always dunst &
 
+# xSettings
+exec --no-startup-id /usr/libexec/gsd-xsettings 
+
+# set keyboard to us international
+exec_always setxkbmap us -variant intl
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
