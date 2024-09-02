@@ -1,0 +1,7 @@
+[user]
+	name = jteich99
+	email = jteich@fi.uba.ar
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
