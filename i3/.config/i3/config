@@ -200,14 +200,9 @@ gaps inner 4
 # Outer gaps for all windows: space along the screen edges.
 # gaps outer|horizontal|vertical|top|left|bottom|right 5[px]
 
-# execute redshift
-# exec_always killall redshift
-exec_always redshift -x
-# exec_always redshift -l -34:-58 -t 5000:3000
-# exec_always redshift
-
 # borders
 for_window [class=.*] border pixel 4
+
 # class                 border  backgr. text    indicator child_border
 # client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 client.focused          #49008C #41007C #ffffff #49008C   #49008C
