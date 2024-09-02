@@ -133,3 +133,7 @@ export NVM_DIR="$HOME/.nvm"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
+
+# Path to rofi rifi menu
+export PATH="$PATH:$HOME/repos/rofi-wifi-menu"
+alias rofi-wifi="rofi-wifi-menu.sh &" 
