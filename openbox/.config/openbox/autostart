@@ -1,0 +1,78 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# test
+xcompmgr -n &
+
+# nitrogen 
+(sleep 1s && nitrogen --restore) &
+
+
+# Compositor
+# picom -f &
+
+
+#Tint2	
+# tint2 &
+#tint2 -c ~/.config/tint2/pills-time.tint2rc & 
+#tint2 -c ~/.config/tint2/pills-taskbar.tint2rc &
+#tint2 -c ~/.config/tint2/pills-mpd.tint2rc &
+#tint2 -c ~/.config/tint2/pills-power.tint2rc &
+#tint2 -c ~/.config/tint2/pills-apps.tint2rc &
+
+#Polybar
+#$HOME/.config/polybar/launch.sh
+bash $HOME/Documents/dotfiles/.config/polybar/launch.sh & 
+
+# Notification daemon
+dunst &
+
+
+#power-manager
+xfce4-power-manager &
+
+
+#redshift
+# redshift -c ~/.config/redshift/redshift.conf &
+# NOTE: Redshift not working properly with symlinks.
+redshift -l -36:-64 -t 5000:3500 &
+
+
+#clipit
+clipit &
+
+# Add compose key
+setxkbmap -option compose:caps &
+
+
+# Activate touchpad click
+# (https://simpleit.rocks/linux/ubuntu/activate-single-tap-touchpad-ubuntu/)
+# xinput list | grep TouchPad | grep -oP '(?<=id=)..' 
+TEMP_TP1_VAR=$(xinput list | grep TouchPad | grep -oP '(?<=id=)..')
+# xinput list-props 14 | grep 'Tapping Enabled (' | awk -F"[()]" '{print $2}'
+TEMP_TP2_VAR=$(xinput list-props $TEMP_TP1_VAR | grep 'Tapping Enabled (' | awk -F"[()]" '{print $2}')
+xinput set-prop $TEMP_TP1_VAR $TEMP_TP2_VAR 1
+
+
+# Screensaver
+# starting screen saver stuff later, nobody needs that after login
+# CREDITS: https://buntu4win.wordpress.com/2015/05/04/how-to-build-a-kick-ass-screen-saverlock-for-openbox/
+# Start GNOME screen saver
+( sleep 30 && gnome-screensaver ) &
+# enable autolock
+#( sleep 30 && xautolock -time 10 -locker "/home/$USER/.local/bin/scripts/screensaver.sh" -corners +0-0 -cornerdelay 15 -cornerredelay 5 -detectsleep ) &
+# disable cappuccino if enabled
+if [ -f "/home/$USER/.config/openbox/cappuccino" ];
+    then rm -f "/home/$USER/.config/openbox/cappuccino" &
+fi
