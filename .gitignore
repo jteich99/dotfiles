@@ -1,5 +1,5 @@
 *.pyc
-*.vim/plugged
+**/.vim/plugged
 .icons/cherry/
 .config/lazygit/state.yml
 .local/share/fonts/NerdFonts
