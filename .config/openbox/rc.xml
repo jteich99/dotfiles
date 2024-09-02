@@ -314,6 +314,13 @@
     <keybind key="W-j"><action name="Unmaximize"/><action name="MoveResizeTo"><height>50%</height><y>-0</y></action></keybind> 
     <keybind key="W-f"><action name="Unmaximize"/><action name="MoveResizeTo"><height>75%</height><width>70%</width><x>15%</x><y>12%</y></action></keybind> 
     <keybind key="W-S-f"><action name="Unmaximize"/><action name="MoveResizeTo"><height>85%</height><width>80%</width><x>10%</x><y>7%</y></action></keybind> 
+    <keybind key="W-A-h"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>33%</width><x>0</x></action></keybind>   
+    <keybind key="W-A-k"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>34%</width><x>-33%</x></action></keybind>
+    <keybind key="W-A-l"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>33%</width><x>-0</x></action></keybind>    
+    <keybind key="W-C-h"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>67%</width><x>0</x></action></keybind> 
+    <keybind key="W-C-l"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>67%</width><x>-0</x></action></keybind>   
+    <keybind key="W-C-k"><action name="Unmaximize"/><action name="MoveResizeTo"><width>100%</width><height>50%</height><y>0</y></action></keybind> 
+    <keybind key="W-C-j"><action name="Unmaximize"/><action name="MoveResizeTo"><width>100%</width><height>50%</height><y>-0</y></action></keybind>    
 	
 # Keybindings for running applications
 
