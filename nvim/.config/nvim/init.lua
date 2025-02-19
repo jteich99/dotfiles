@@ -15,7 +15,24 @@ vim.opt.rtp:prepend(lazypath)
 vim.opt.termguicolors = true
 
 vim.opt.clipboard = "unnamedplus"
--- vim.opt.clipboard = "xclip"
+-- vim.opt.clipboard = ""
+-- clipboard = "xclip"
+
+vim.opt.cursorline = true
+
+-- sync with system clipboard on focus
+vim.api.nvim_create_autocmd({ "FocusGained" }, {
+    pattern = { "*" },
+    command = [[call setreg("@", getreg("+"))]],
+})
+
+-- sync with system clipboard on focus
+vim.api.nvim_create_autocmd({ "FocusLost" }, {
+    pattern = { "*" },
+    command = [[call setreg("+", getreg("@"))]], 
+})
+
+local opts = {}
 
 
 local opts = {}
