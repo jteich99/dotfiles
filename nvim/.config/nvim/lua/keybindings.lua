@@ -72,8 +72,9 @@ map('n', '<leader>b', '<Cmd>BufferPick<CR>', opts)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
+vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, {})
 
-local diagnostics_active = false 
+-- local diagnostics_active = false 
 vim.keymap.set('n', '<leader>d', function()
     diagnostics_active = not diagnostics_active
     if diagnostics_active then
