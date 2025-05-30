@@ -40,6 +40,15 @@ return {
                     { name = "buffer" },
                 }),
             })
+            cmp.setup.filetype('markdown', {
+            --   sources = cmp.config.sources({
+            --   --   { name = 'buffer' }, -- Only basic buffer words
+            --   }),
+            --   -- Optional: Reduce completion triggers
+              completion = {
+                keyword_length = 3, -- Only suggest after 3+ chars
+              }
+            })
         end,
     },
 }
