@@ -137,3 +137,6 @@ export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
 # Path to rofi rifi menu
 export PATH="$PATH:$HOME/repos/rofi-wifi-menu"
 alias rofi-wifi="rofi-wifi-menu.sh &" 
+
+# make mc use the config file
+export MC_HOME="$HOME/.config/mc"
