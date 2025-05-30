@@ -85,6 +85,12 @@ vim.keymap.set('n', '<leader>d', function()
         vim.diagnostic.disable()
     end
 end)
+-- Show diagnostic under cursor
+vim.keymap.set('n', 'gl', vim.diagnostic.open_float, { desc = "Show error message" })
+
+-- Navigate diagnostics
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Next diagnostic" })
 --
 
 -- telescope
