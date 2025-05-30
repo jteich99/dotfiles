@@ -34,8 +34,18 @@ vim.api.nvim_create_autocmd({ "FocusLost" }, {
 
 local opts = {}
 
+-- Enable spell-check for Markdown files
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "markdown",
+--   callback = function()
+--     vim.opt.spell = true
+--     vim.opt.spelllang = "en,es"  -- Both languages
+--   end,
+-- })
 
-local opts = {}
+-- Line numbers
+-- vim.opt.number = true
+vim.opt.relativenumber = true
 
 require("keybindings")
 require("lazy").setup("plugins")
