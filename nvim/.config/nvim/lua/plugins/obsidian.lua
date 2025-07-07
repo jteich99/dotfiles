@@ -41,6 +41,7 @@ return {
             vim.keymap.set( 'n', "<leader>ot" , ":ObsidianTemplate<CR>"),
             vim.keymap.set( 'n', "<leader>ob" , ":ObsidianBacklinks<CR>"),
             vim.keymap.set( 'n', "<leader>oo" , ":ObsidianQuickSwitch<CR>"),
+            vim.keymap.set( 'n', "<leader>or" , ":ObsidianRename<CR>"),
             vim.keymap.set( 'v', "<leader>oln" , ":ObsidianLinkNew<CR>"),
             vim.keymap.set( 'v', "<leader>ol" , ":ObsidianLink<CR>"),
         },

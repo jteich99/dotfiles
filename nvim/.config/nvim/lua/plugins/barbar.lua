@@ -24,5 +24,5 @@ return {
             Outline = {event = 'BufWinLeave', text = 'symbols-outline', align = 'right'},
             },
         }
-    end
+    end,
 }
