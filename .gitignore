@@ -3,4 +3,5 @@
 .icons/cherry/
 .config/lazygit/state.yml
 .local/share/fonts/NerdFonts
-nvim/.config/nvim/*.json
+**/nvim/lazy-lock.json
+
