@@ -20,7 +20,9 @@ return {
                     -- "pyright",
                     "jedi_language_server",
                     -- "pylsp"
-                    "marksman"
+                    "marksman",
+                    "perlnavigator",
+                    "fortls"
                 },
                 automatic_installation = true
             })
@@ -61,6 +63,23 @@ return {
             lspconfig.jedi_language_server.setup {}
             -- lspconfig.pylsp.setup {}
             lspconfig.marksman.setup {}
+            lspconfig.perlnavigator.setup {
+                cmd = { "perlnavigator" },
+                settings = {
+                    perlnavigator = {
+                        perlPath = 'perl',
+                        enableWarnings = true,
+                        perltidyProfile = '',
+                        perlcriticProfile = '',
+                        perlcriticEnabled = true,
+                    }
+                }
+            }
+            lspconfig.fortls.setup {
+                cmd = { "fortls" },
+                filetypes = { "fortran" },
+                root_dir = require('lspconfig.util').root_pattern(".fortls", ".git"),
+            }
 
             vim.diagnostic.enable()
         end
