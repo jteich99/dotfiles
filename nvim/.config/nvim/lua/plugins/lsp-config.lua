@@ -19,6 +19,7 @@ return {
                     -- "pyright",
                     "jedi_language_server",
                     -- "pylsp"
+                    -- "marksman"
                 }
             })
         end
@@ -57,6 +58,7 @@ return {
             }
             -- lspconfig.pyright.setup {}
             lspconfig.jedi_language_server.setup {}
+            -- lspconfig.marksman.setup {}
             -- lspconfig.pylsp.setup {}
 
             vim.diagnostic.disable()
