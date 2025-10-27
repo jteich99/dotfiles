@@ -1,0 +1,39 @@
+output "Chimei Innolux Corporation 0x143F Unknown" {
+    mode 1920x1200@60.00300
+    position 0,0
+    scale 1
+    alias $INTERNAL
+}
+
+output "Samsung Electric Company LS27A600U H9VX705530" {
+    mode 2560x1440@74.99800
+    position -2560,0
+    scale 1
+    alias $MONITOR27
+}
+
+output "Samsung Electric Company S24F350 HCNN701135" {
+    mode 1920x1080@60.00Hz
+    position -4480,0
+    scale 1
+    alias $MONITOR24
+}
+
+profile docked {
+    output $MONITOR27 enable 
+    output $INTERNAL enable 
+}
+
+profile dockedDoubleMonitor {
+    output $MONITOR24 enable 
+    output $MONITOR27 enable 
+    output $INTERNAL enable 
+}
+
+profile laptop {
+    output eDP-1 scale 1 
+}
+
+profile docked-closed {
+    output $MONITOR27 enable 
+}
