@@ -30,7 +30,9 @@
     - [zsh]()
         - set `zsh` as default shell
             - `sudo chsh -s $(which zsh)` and `chsh -s $(which zsh)`
-        - install [`oh-my-zsh`]() and [`powerlevel10k`]()
+        - install [`oh-my-zsh`](https://ohmyz.sh/) and [`powerlevel10k`](https://github.com/romkatv/powerlevel10k)
+        - install [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh) with `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+        - install [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) with `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 - setup configs with `gnu-stow`
 - install [`i3`](https://i3wm.org/) and setup config with `gnu-stow`
     - install [`rofi`](https://github.com/davatorium/rofi)
